@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Components / Cards - NiceAdmin Bootstrap Template</title>
+  <title>Components / Alerts - NiceAdmin Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -287,7 +287,7 @@
         </a>
         <ul id="components-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.php?page=regis">
+            <a href="components-alert.php?page=regis">
               <i class="bi bi-circle"></i><span>Register</span>
             </a>
           </li>
@@ -326,7 +326,6 @@
               <i class="bi bi-circle"></i><span>Tokyo</span>
             </a>
           </li>
-          <li>
             <a href="components-carousel.html">
               <i class="bi bi-circle"></i><span>Carousel</span>
             </a>
@@ -519,47 +518,41 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Cards</h1>
+      <h1>Alerts</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item">Components</li>
-          <li class="breadcrumb-item active">Cards</li>
+          <li class="breadcrumb-item active">Alerts</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
     <section class="section">
-      <div class="row align-items-top">
-        <div class="col-lg-12">
+      <div class="row">
+        <div class="col-lg-6">
 
-          <!-- Default Card -->
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">
 
+              <h5 class="card-title"></h5>
               <?php
-     if (isset($_GET['page'])){
+                 if (isset($_GET['page'])){
         $page=$_GET['page'];
         switch ($page){
-            case 'london':
-            include 'modules/london.php';
-            break;
-            case 'paris':
-            include 'modules/paris.php';
-            break;
-            case 'tokyo':
-            include 'modules/tokyo.php';
+            case 'regis':
+            include 'modules/regis.php';
             break;
         }
-     }
-     
-     
-     ?>
-              </h5>
-             
-</div><!-- End Default Card -->
+      }
+              ?>
 
+            </div>
+          </div>
+
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

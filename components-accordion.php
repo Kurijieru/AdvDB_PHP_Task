@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Components / Cards - NiceAdmin Bootstrap Template</title>
+  <title>Components / Accordion - NiceAdmin Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -292,7 +292,7 @@
             </a>
           </li>
           <li>
-            <a href="components-accordion.php?page=users">
+            <a href="components-accordion.php?page=user" class="active">
               <i class="bi bi-circle"></i><span>Users</span>
             </a>
           </li>
@@ -519,47 +519,38 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Cards</h1>
+      <h1>Accordion</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item">Components</li>
-          <li class="breadcrumb-item active">Cards</li>
+          <li class="breadcrumb-item active">Accordion</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
     <section class="section">
-      <div class="row align-items-top">
+      <div class="row">
         <div class="col-lg-12">
 
-          <!-- Default Card -->
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">
-
-              <?php
-     if (isset($_GET['page'])){
+              <h5 class="card-title">Users</h5>
+            <?php 
+              if (isset($_GET['page'])){
         $page=$_GET['page'];
         switch ($page){
-            case 'london':
-            include 'modules/london.php';
-            break;
-            case 'paris':
-            include 'modules/paris.php';
-            break;
-            case 'tokyo':
-            include 'modules/tokyo.php';
+            case 'users':
+            include 'modules/users.php';
             break;
         }
-     }
-     
-     
-     ?>
-              </h5>
-             
-</div><!-- End Default Card -->
+      }
 
+?>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
